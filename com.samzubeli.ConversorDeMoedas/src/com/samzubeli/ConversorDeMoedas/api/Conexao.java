@@ -24,8 +24,7 @@ public class Conexao {
 			System.out.println("Houve um erro de comunicacao com a API WEB");
 			System.out.println(e.getMessage());
 			throw new RuntimeException(e);
-		}
-		
+		}		
 	}
 }
 
@@ -33,14 +32,13 @@ public class Conexao {
  * https://v6.exchangerate-api.com/v6/YOUR-API-KEY/pair/EUR/GBP -> devolve no
  * json a taxa de câmbio
  * 
- * EUR -> moeda base 
- * USD -> moeda alvo 
- * "YOUR-API-KEY/pair/EUR/GBP ou
+ * EUR -> moeda base USD -> moeda alvo key =
+ * "YOUR-API-KEY/pair/EUR/GBP" ou
  * "YOUR-API-KEY/pair/EUR/GBP/AMOUNT"
  * 
  * GET https://v6.exchangerate-api.com/v6/YOUR-API-KEY/pair/EUR/GBP/AMOUNT ->
  * devolve no json moeda alvo já convertida.
  * 
- * Ex: https://v6.exchangerate-api.com/v6/YOUR KEY/latest/USD ->
+ * Ex: https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD ->
  * devolve todas moedas convertidas em relação ao dollar.
  */
